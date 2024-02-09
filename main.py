@@ -171,11 +171,6 @@ pipe = pipeline("image-classification",
                 model=model,
                 feature_extractor=image_processor)
 
-# from os.path import isfile, join
-# clippers = [join('./dataset/HF_DS/clippers',f) for f in listdir('./dataset/HF_DS/clippers') if isfile(join('./dataset/HF_DS/clippers', f))]
-
-# for f_path in clippers:
-#     print(pipe(f_path))
 
 trainer.push_to_hub()
 
